@@ -530,11 +530,11 @@ otherwise return nil."
 (defun neuron--insert-zettel-link-from-id (id)
   "Insert a zettel link.
 Depending on the value of `neuron-use-short-links',
-the inserted link will either be of the form <ID> or
+the inserted link will either be of the form [[ID]] or
 [ID](z:/)."
   (if neuron-use-short-links
       (progn
-        (insert (format "<%s>" id))
+        (insert (format "[[%s]]" id))
         (neuron--setup-overlays))
     (format "[%s](z:/)" id)))
 
