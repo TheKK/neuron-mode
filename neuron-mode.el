@@ -425,6 +425,7 @@ When TITLE is nil, prompt the user."
 
 (defun neuron--style-zettel-id (zid)
   "Style a ZID as shown in the completion prompt."
+  ;; TODO Not sure about this.
   (propertize (format "<%s>" zid) 'face 'neuron-link-face))
 
 (defun neuron--style-tags (tags)
