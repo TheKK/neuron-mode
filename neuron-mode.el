@@ -1133,7 +1133,7 @@ The resulting title is truncated and padded to fit the width given by
 (defun company-neuron--completion-annotation (candidate)
   "Annotate the completion CANDIDATE so that it includes the ID of the underlying zettel."
   (let* ((zettel (get-text-property 0 'zettel candidate))
-         (annot (format "<%s>" (alist-get 'zettelID zettel))))
+         (annot (format "[[%s]]" (alist-get 'zettelID zettel))))
     (concat " " (propertize annot 'face 'neuron-link-face))))
 
 (defun company-neuron--completion-meta (candidate)
