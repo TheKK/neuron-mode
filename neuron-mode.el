@@ -1102,7 +1102,7 @@ link is a folgezettel of ordinary connection."
 (defun company-neuron--prefix ()
   "Extract the completion prefix, triggered by entering an opening angle bracket."
   (and (derived-mode-p 'neuron-mode)
-       (when (looking-back (rx "<" (group (+ (not (any ">"))))) nil)
+       (when (looking-back (rx "[[" (group (+ (not (any "]"))))) nil)
          (match-string 1))))
 
 (defun company-neuron--fuzzy-match-title (prefix candidate)
